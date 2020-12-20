@@ -248,6 +248,8 @@ def siamese_track(state, im, mask_enable=False, refine_enable=False, device='cpu
     target_pos = np.array([res_x, res_y])
     target_sz = np.array([res_w, res_h])
 
+    print("Targets : ",target_pos)
+
     # for Mask Branch
     if mask_enable:
         best_pscore_id_mask = np.unravel_index(best_pscore_id, (5, p.score_size, p.score_size))

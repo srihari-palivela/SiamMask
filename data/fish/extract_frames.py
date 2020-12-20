@@ -11,8 +11,8 @@ except:
 
 dirpath = os.path.isdir(fname)
 if os.path.exists(dirpath) and os.path.isdir(dirpath):
-	shutil.rmtree(dirpath)
-        os.makedirs(op.path.dir_name(dirpath))
+    shutil.rmtree(dirpath)
+    os.makedirs(os.path.dir_name(dirpath))
         
 vidcap = cv2.VideoCapture(filename)
 fps = vidcap.get(cv2.CAP_PROP_FPS)
