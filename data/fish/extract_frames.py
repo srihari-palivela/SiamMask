@@ -24,7 +24,7 @@ count = 0
 frame_step = 1/fps
 while success:
   frame_timestamp = "{sec}.{frame_number}".format(sec=str(int(count/fps)).zfill(5), frame_number= str(int(count%fps)).zfill(5))
-  cv2.imwrite("{fname}/%s.jpg" % str(frame_timestamp), image)     # save frame as JPEG file
+  cv2.imwrite("{fname}/{fts}.jpg".format(fname = fname, fts=str(frame_timestamp)), image)     # save frame as JPEG file
   success,image = vidcap.read()
   # print('Read a new frame: ', success)
   count += 1
